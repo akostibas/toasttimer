@@ -12,6 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy-dev": "aws s3 sync --delete build/ s3://dev.toasttimer.com/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
