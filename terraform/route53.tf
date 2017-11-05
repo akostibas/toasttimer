@@ -12,7 +12,7 @@ resource "aws_route53_record" "dns_web_a_record" {
 
   alias {
     name    = "${aws_s3_bucket.web_bucket.website_domain}"
-    zone_id = "${var.route53_zone}"
+    zone_id = "${var.s3_uswest2_zone}"
     evaluate_target_health = false
   }
 }

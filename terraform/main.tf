@@ -22,6 +22,12 @@ variable "route53_zone" {
   default = "Z1FGOCUQ0416EA"
 }
 
+variable "s3_uswest2_zone" {
+  description = "S3 us-west-2 zone ID"
+  type = "string"
+  default = "Z3BJ6K6RIION7M"
+}
+
 provider "aws" {
   region = "us-west-2"
 }
