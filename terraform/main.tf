@@ -23,6 +23,8 @@ variable "route53_zone" {
 }
 
 variable "s3_uswest2_zone" {
+  // Looked up from:
+  // http://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region
   description = "S3 us-west-2 zone ID"
   type = "string"
   default = "Z3BJ6K6RIION7M"
