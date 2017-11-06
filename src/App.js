@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import headerImage from './images/header.jpeg';
 import './App.css';
+import SpeechButton from './speech_buttons/speechButton.js';
 
 class App extends Component {
   render() {
@@ -12,6 +13,10 @@ class App extends Component {
         </header>
         <p className="App-intro">
           The free Toastmasters timer app.
+        </p>
+        <p>
+          <SpeechButton />
+          <SpeechButton />
         </p>
       </div>
     );
