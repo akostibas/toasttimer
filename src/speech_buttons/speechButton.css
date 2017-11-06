@@ -1,0 +1,18 @@
+.SpeechButton {
+  font-size: large;
+  background: orange;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+}
+
+.SpeechButton p {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
