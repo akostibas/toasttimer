@@ -11,7 +11,7 @@ class SpeechButton extends Component {
     return (
       <div className="SpeechButton" onClick={ this.sayHi }>
         <p>
-          Two minute special
+          {this.props.name}
         </p>
       </div>
     );

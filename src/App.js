@@ -14,10 +14,17 @@ class App extends Component {
         <p className="App-intro">
           The free Toastmasters timer app.
         </p>
-        <p>
-          <SpeechButton />
-          <SpeechButton />
-        </p>
+        <div className="row">
+          <div className="column-third">
+            <SpeechButton name="Two minute special" />
+          </div>
+          <div className="column-third">
+            <SpeechButton name="Table topic" />
+          </div>
+          <div className="column-third">
+            <SpeechButton name="Standard speech" />
+          </div>
+        </div>
       </div>
     );
   }

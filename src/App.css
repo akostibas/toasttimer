@@ -20,3 +20,18 @@
   font-size: large;
   padding: 20px;
 }
+
+.column-third {
+  float: left;
+  width: 33%;
+}
+
+.row {
+  margin: auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
