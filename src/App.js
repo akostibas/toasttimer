@@ -16,13 +16,13 @@ class App extends Component {
         </p>
         <div className="row">
           <div className="column-third">
-            <SpeechButton name="Two minute special" />
+            <SpeechButton name="Two minute special" seconds="120" />
           </div>
           <div className="column-third">
-            <SpeechButton name="Table topic" />
+            <SpeechButton name="Table topic" seconds="120" />
           </div>
           <div className="column-third">
-            <SpeechButton name="Standard speech" />
+            <SpeechButton name="Standard speech" seconds="360" />
           </div>
         </div>
       </div>
