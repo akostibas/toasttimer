@@ -5,8 +5,10 @@ import SpeechButton from './speech_buttons/speechButton.js';
 import Timer from './Timer.js';
 import {
   BrowserRouter as Router,
+  Link,
+  Redirect,
   Route,
-  Link
+  Switch
 } from 'react-router-dom'
 
 const SelectSpeech = () => (
@@ -20,16 +22,32 @@ const SelectSpeech = () => (
     </p>
     <div className="row">
       <div className="column-third">
-        <SpeechButton name="Two minute special" seconds="120" />
+        <Link to={{
+          pathname: "/timer/",
+          state: { seconds: 120 } }}>
+          <SpeechButton name="Two minute special" />
+        </Link>
       </div>
       <div className="column-third">
-        <SpeechButton name="Table topic" seconds="120" />
+        <Link to={{
+          pathname: "/timer/",
+          state: { seconds: 120 } }}>
+          <SpeechButton name="Table topic" />
+        </Link>
       </div>
       <div className="column-third">
-        <SpeechButton name="Standard speech" seconds="360" />
+        <Link to={{
+          pathname: "/timer/",
+          state: { seconds: 360 } }}>
+          <SpeechButton name="Standard speech" />
+        </Link>
       </div>
     </div>
   </div>
+)
+
+const NoMatch = () => (
+  <Redirect to="/" />
 )
 
 class App extends Component {
@@ -37,8 +55,15 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path='/' component={SelectSpeech} />
-          <Route path='/timer' component={Timer} />
+          {/* Use <Switch> since we only ever want to render one of the
+           * matching routes.
+           * https://reacttraining.com/react-router/web/api/Switch
+           */}
+          <Switch>
+            <Route exact path='/' component={SelectSpeech} />
+            <Route exact path='/timer/' component={Timer} />
+            <Route component={NoMatch} />
+          </Switch>
         </div>
       </Router>
     );
